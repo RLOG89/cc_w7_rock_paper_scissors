@@ -20,6 +20,7 @@ public class RockPaperScissors extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        final Game game = new Game();
         setContentView(R.layout.activity_main);
         mRockButton = (Button) findViewById(R.id.rock_button);
         mPaperButton = (Button) findViewById(R.id.paper_button);
@@ -30,9 +31,8 @@ public class RockPaperScissors extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d("RockPaperScissors", "Rock clicked");
                 Intent intent = new Intent(RockPaperScissors.this, ResultActivity.class);
-
-
-//                intent.putExtra("result", result);
+                String result = game.playGame("Rock");
+                intent.putExtra("result", result);
                 startActivity(intent);
             }
 
@@ -43,7 +43,8 @@ public class RockPaperScissors extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d("RockPaperScissors", "Paper clicked");
                 Intent intent = new Intent(RockPaperScissors.this, ResultActivity.class);
-//                intent.putExtra("result", result);
+                String result = game.playGame("Paper");
+                intent.putExtra("result", result);
                 startActivity(intent);
             }
 
@@ -54,7 +55,8 @@ public class RockPaperScissors extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d("RockPaperScissors", "Scissors clicked");
                 Intent intent = new Intent(RockPaperScissors.this, ResultActivity.class);
-//                intent.putExtra("result", result);
+                String result = game.playGame("Scissors");
+                intent.putExtra("result", result);
                 startActivity(intent);
             }
 

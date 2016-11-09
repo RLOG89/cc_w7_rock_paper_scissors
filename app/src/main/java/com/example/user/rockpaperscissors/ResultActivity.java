@@ -23,10 +23,10 @@ public class ResultActivity extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-//        Bundle extras = intent.getExtras();
-//        String result = extras.getString("result");
+        Bundle extras = intent.getExtras();
+        String result = extras.getString("result");
 
-        mResultText.setText("Computer chose + choice + you + result");
+        mResultText.setText(result);
     }
 
 }

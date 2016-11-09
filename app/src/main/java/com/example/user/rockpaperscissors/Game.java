@@ -12,8 +12,7 @@ public class Game {
     private String move;
     protected ArrayList<String> mComputerMove;
 
-    public Game(String move) {
-        this.move = move;
+    public Game(){
         mComputerMove = new ArrayList<String>();
         setUpComputerMoves();
     }
