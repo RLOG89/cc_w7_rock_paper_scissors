@@ -42,8 +42,7 @@ public class Game {
 
     public String computerMove() {
         Random rand = new Random();
-        int arraylength = mComputerMove.size();
-        int randomIndex = rand.nextInt(arraylength);
+        int randomIndex = rand.nextInt(3);
         String randomMove = mComputerMove.get(randomIndex);
 
         return randomMove;
