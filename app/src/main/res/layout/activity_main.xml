@@ -3,4 +3,32 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
+        <Button
+            android:id="@+id/rock_button"
+            android:text=""
+            android:layout_width="150dip"
+            android:layout_height="150dip"
+            android:layout_gravity="center"
+            android:background="@drawable/rock"
+            />
+
+        <Button
+            android:id="@+id/paper_button"
+            android:text=""
+            android:layout_width="150dip"
+            android:layout_height="150dip"
+            android:layout_gravity="center"
+            android:background="@drawable/paper"/>
+
+        <Button
+            android:id="@+id/scissors_button"
+            android:text=""
+            android:layout_width="150dip"
+            android:layout_height="150dip"
+            android:layout_gravity="center"
+            android:background="@drawable/scissors"/>
+
 </LinearLayout>
+
