@@ -44,7 +44,6 @@ public class Game {
         Random rand = new Random();
         int randomIndex = rand.nextInt(3);
         String randomMove = mComputerMove.get(randomIndex);
-
         return randomMove;
 
     }
@@ -53,33 +52,28 @@ public class Game {
     public String playGame(String move) {
         setMove(move);
         String turn = this.computerMove();
+        String win =  "You played " + move + ", computer played " + turn + ", you win! Good job!";
+        String draw = "You played "+ move + " computer played " + turn + ", you draw! Play again!";
+        String lose = "You played " + move + ", computer played " + turn + ", you lose! Wah wah wahhhhhh!";
+
         if (this.move == "Rock" && turn == "Scissors") {
-            return "YOU WIN!";
+            return win;
         }
         if (this.move == "Rock" && turn == "Rock") {
-            return "DRAW!";
-        }
-        if (this.move == "Rock" && turn == "Paper") {
-            return "LOSER!";
+            return draw;
         }
         if (this.move == "Scissors" && turn == "Paper") {
-            return "YOU WIN!";
+            return win;
         }
         if (this.move == "Scissors" && turn == "Scissors") {
-            return "DRAW!";
-        }
-        if (this.move == "Scissors" && turn == "Rock") {
-            return "LOSER!";
+            return draw;
         }
         if (this.move == "Paper" && turn == "Rock") {
-            return "YOU WIN!";
+            return win;
         }
         if (this.move == "Paper" && turn == "Paper") {
-            return "DRAW!";
+            return draw;
         }
-        if (this.move == "Paper" && turn == "Scissors") {
-            return "LOSER!";
-        }
-        else return "What are you doing, stop breaking our game!";
+        else return lose;
     }
 }
