@@ -56,7 +56,7 @@ public class Game {
         String draw = "You played "+ move + " computer played " + turn + ", you draw! Play again!";
         String lose = "You played " + move + ", computer played " + turn + ", you lose! Wah wah wahhhhhh!";
 
-        if (this.move == turn {
+        if (this.move == turn) {
             return draw;
         }
         if (this.move == "Rock" && turn == "Scissors") {
