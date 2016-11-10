@@ -53,21 +53,13 @@ public class Game {
         setMove(move);
         String turn = this.computerMove();
         String win =  "You played " + move + ", computer played " + turn + ", you win! Good job!";
-        String draw = "You played "+ move + " computer played " + turn + ", you draw! Play again!";
+        String draw = "You played " + move + ", computer played " + turn + ", you draw! Play again!";
         String lose = "You played " + move + ", computer played " + turn + ", you lose! Wah wah wahhhhhh!";
 
-        if (this.move == turn) {
-            return draw;
-        }
-        if (this.move == "Rock" && turn == "Scissors") {
-            return win;
-        }
-        if (this.move == "Scissors" && turn == "Paper") {
-            return win;
-        }
-        if (this.move == "Paper" && turn == "Rock") {
-            return win;
-        }
+        if (this.move == turn) {return draw;}
+        if (this.move == "Rock" && turn == "Scissors") {return win;}
+        if (this.move == "Scissors" && turn == "Paper") {return win;}
+        if (this.move == "Paper" && turn == "Rock") {return win;}
         else return lose;
     }
 }
