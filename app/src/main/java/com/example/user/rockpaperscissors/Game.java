@@ -56,23 +56,17 @@ public class Game {
         String draw = "You played "+ move + " computer played " + turn + ", you draw! Play again!";
         String lose = "You played " + move + ", computer played " + turn + ", you lose! Wah wah wahhhhhh!";
 
+        if (this.move == turn {
+            return draw;
+        }
         if (this.move == "Rock" && turn == "Scissors") {
             return win;
-        }
-        if (this.move == "Rock" && turn == "Rock") {
-            return draw;
         }
         if (this.move == "Scissors" && turn == "Paper") {
             return win;
         }
-        if (this.move == "Scissors" && turn == "Scissors") {
-            return draw;
-        }
         if (this.move == "Paper" && turn == "Rock") {
             return win;
-        }
-        if (this.move == "Paper" && turn == "Paper") {
-            return draw;
         }
         else return lose;
     }
